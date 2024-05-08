@@ -129,15 +129,15 @@ console.log(isMenuItemInCategory(menu[1], "Salad"));
 
 function addMenuItem(menu, menuItem) {
   // Your code here
+  //const newMenuItem = {
+  // id: 306,
+  // name: "Pizza",
+  //     category: "Main Course",
+  //     price: 14.99,
+  //     ingredients: ["Dough", "Tomato Sauce", "Mozzarella", "Pepperoni"],
+  //   };
+  //   return menu.push(newMenuItem);
 }
-
-// const newMenuItem = {
-//   id: 306,
-//   name: "Pizza",
-//   category: "Main Course",
-//   price: 14.99,
-//   ingredients: ["Dough", "Tomato Sauce", "Mozzarella", "Pepperoni"],
-// };
 
 // console.log(addMenuItem(menu, newMenuItem));
 
@@ -152,8 +152,16 @@ function addMenuItem(menu, menuItem) {
 
 function countMainCourseItems(menu) {
   // Your code here
+  let count = 0;
+  return menu.filter((m) => {
+    if (m.category == "Main Course") {
+      return (count += 1);
+    } else return false;
+    console.log(count);
+  });
 }
-// console.log(countMainCourseItems(menu));
+
+console.log(countMainCourseItems(menu));
 
 /**********
     Question 5: 🌶️
